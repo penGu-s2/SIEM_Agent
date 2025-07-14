@@ -27,14 +27,23 @@ namespace SIEM_Agent
                     System.IO.Directory.CreateDirectory("logs");
                 }
 
+                // Kiểm tra file agent_config.json tồn tại
+                if (!File.Exists("agent_config.json"))
+                {
+                    MessageBox.Show("Không tìm thấy file agent_config.json!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 // Đọc cấu hình
                 var configJson = File.ReadAllText("agent_config.json");
                 var config = JsonSerializer.Deserialize<dynamic>(configJson);
 
-                // Kiểm tra nếu config_sync.enable = true thì mới chạy đồng bộ
+                // Luôn khởi động Fluent Bit khi chạy app
+                FluentBitHelper.RestartFluentBitWithNotify();
+
                 if (config is System.Text.Json.JsonElement rootElem &&
                     rootElem.TryGetProperty("config_sync", out var syncCfg) &&
-                    syncCfg.TryGetProperty("enable", out var enableProp) &&
+                    syncCfg.TryGetProperty("enabled", out var enableProp) &&
                     enableProp.GetBoolean())
                 {
                     var configSyncService = new ConfigSyncService(
@@ -43,13 +52,17 @@ namespace SIEM_Agent
                     );
                     configSyncService.OnConfigUpdated += (sender, configPath) =>
                     {
+                        string logPath = Path.Combine("logs", "config_changes.log");
+                        using (var sw = new StreamWriter(logPath, true))
+                        {
+                            sw.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Đã cập nhật fluent-bit.conf");
+                        }
+                        // Đảm bảo dừng fluent-bit cũ trước khi restart lại
+                        FluentBitHelper.StopFluentBit();
                         FluentBitHelper.RestartFluentBitWithNotify();
                     };
                     configSyncService.Start();
                 }
-
-                // Khởi động Fluent Bit ngay khi chạy app
-                FluentBitHelper.RestartFluentBitWithNotify();
 
                 // Khởi tạo repository và service
                 var logRepository = new LogRepository("logs");

@@ -1,8 +1,8 @@
 {
-  "aes_key": "mydreamteam123456778899",
+  "aes_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl9pbmZvIjp7InN1YmplY3QiOiJhZ2VudDo2ODZkZGFiZDUxMWNhODQxNjU4MTAzMTciLCJleHAiOjE3NTIzODk4OTgsIm1ldGFfZGF0YSI6eyJBZ2VudEluZm8iOiJ7XCJhZ2VudF9pZFwiOlwiNjg2ZGRhYmQ1MTFjYTg0MTY1ODEwMzE3XCIsXCJuYW1lXCI6XCIzNDYzNDYzNlwiLFwiZGVzY3JpcHRpb25cIjpcInN0XCIsXCJjcmVhdGVkX3RpbWVcIjoxNzUyMDI5ODg1LFwidXBkYXRlZF90aW1lXCI6MTc1MjAyOTg4NX0ifX0sImV4cCI6MTc1MjM4OTg5OH0.IhxkaBcjLMz1YcRA6_1o0UIJrltztVvs0Cte5Spwsm0",
   "config_sync": {
-    "enabled": false,
-    "url": "https://cbgs.hanhchinhcong.net/getFluentbitConfig?key=mydreamteam123456778899",
+    "enabled": true,
+    "url": "http://192.168.100.153:8081/api/v1/agents/@/config?ctx.access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl9pbmZvIjp7InN1YmplY3QiOiJhZ2VudDo2ODZkZGFiZDUxMWNhODQxNjU4MTAzMTciLCJleHAiOjE3NTIzODk4OTgsIm1ldGFfZGF0YSI6eyJBZ2VudEluZm8iOiJ7XCJhZ2VudF9pZFwiOlwiNjg2ZGRhYmQ1MTFjYTg0MTY1ODEwMzE3XCIsXCJuYW1lXCI6XCIzNDYzNDYzNlwiLFwiZGVzY3JpcHRpb25cIjpcInN0XCIsXCJjcmVhdGVkX3RpbWVcIjoxNzUyMDI5ODg1LFwidXBkYXRlZF90aW1lXCI6MTc1MjAyOTg4NX0ifX0sImV4cCI6MTc1MjM4OTg5OH0.IhxkaBcjLMz1YcRA6_1o0UIJrltztVvs0Cte5Spwsm0",
     "interval_minutes": 5
   },
   "odbc": {

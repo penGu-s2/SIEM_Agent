@@ -104,4 +104,4 @@ F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\parsers.conf
 F:\Code\SIEM_Agent\obj\Debug\net8.0-windows\SIEM_Agent.UI.Forms.Controls.LogsControl.resources
 F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\FluentBit\fluent-bit.dll.pdb
 F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\FluentBit\luajit.pdb
-F:\Code\SIEM_Agent\obj\Debug\net8.0-windows\SIEM_Agent.UI.Forms.Controls.HttpOutputControl.resources
+F:\Code\SIEM_Agent\obj\Debug\net8.0-windows\SIEM_Agent.sourcelink.json

@@ -34,10 +34,13 @@
     <Compile Update="UI\Forms\Controls\LogsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UI\Forms\Controls\ParserControl.cs">
+    <Compile Update="UI\Forms\Controls\OpensearchConfigPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\Controls\OpensearchOutputControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UI\Forms\Controls\PlaybooksControl.cs">
+    <Compile Update="UI\Forms\Controls\ParserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UI\Forms\Controls\ReportsControl.cs">

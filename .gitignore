@@ -1,0 +1,49 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+winlog.db
+
+# Visual Studio
+.vs/
+
+# Publish profiles
+Properties/PublishProfiles/
+
+# Config files
+agent_config.json
+
+# Images (nếu không muốn push)
+# image/
+
+# Thư mục output của publish
+**/publish/
+
+# Thư mục Dockerfile nếu chỉ dùng local
+Dockerfile/
+
+# Các file tạm
+*.tmp
+*.temp
+
+# Các file khác không nên push
+*.pdb
+*.cache
+*.srl
+*.csr
+
+# Ignore Mac/Windows system files
+.DS_Store
+Thumbs.db 
