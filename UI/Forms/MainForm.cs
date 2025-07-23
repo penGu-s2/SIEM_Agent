@@ -8,6 +8,7 @@ using System.Drawing;
 using Guna.UI2.WinForms;
 using SIEM_Agent.UI.Forms.Properties;
 using System.IO;
+using SIEM_Agent.Core;
 
 namespace SIEM_Agent.UI
 {
@@ -22,6 +23,7 @@ namespace SIEM_Agent.UI
             ConfigureEvents();
             // Hiển thị DashboardControl khi khởi động
             LoadControl(new DashboardControl());
+            UpdateFluentBitStatus();
         }
 
         public MainForm(LogManagementService logManagementService) : this()
@@ -91,9 +93,16 @@ namespace SIEM_Agent.UI
             };
         }
 
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+            UpdateFluentBitStatus();
+        }
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             CloseAllConnectionsAndExit();
+            UpdateFluentBitStatus();
             base.OnFormClosing(e);
         }
 
@@ -122,6 +131,33 @@ namespace SIEM_Agent.UI
                 var cp = base.CreateParams;
                 cp.ClassStyle |= 0x200; // CS_NOCLOSE
                 return cp;
+            }
+        }
+
+        private void UpdateFluentBitStatus()
+        {
+            if (IsFluentBitRunning())
+            {
+                lblFluentBitStatus.Text = "Fluent Bit: Đang chạy";
+                lblFluentBitStatus.ForeColor = System.Drawing.Color.LightGreen;
+            }
+            else
+            {
+                lblFluentBitStatus.Text = "Fluent Bit: Đã dừng";
+                lblFluentBitStatus.ForeColor = System.Drawing.Color.OrangeRed;
+            }
+        }
+
+        private bool IsFluentBitRunning()
+        {
+            try
+            {
+                var processes = System.Diagnostics.Process.GetProcessesByName("fluent-bit");
+                return processes != null && processes.Length > 0;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

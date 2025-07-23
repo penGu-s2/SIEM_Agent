@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SIEM Agent")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f9f724385cc0a1ceb8e7960ce6536528f9b218c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c52ec8261354b46e51eeac1900f3b15eb52da61e")]
 [assembly: System.Reflection.AssemblyProductAttribute("SIEM Agent")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SIEM Agent")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

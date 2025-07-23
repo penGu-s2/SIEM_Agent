@@ -27,6 +27,7 @@ namespace SIEM_Agent.UI
         private System.Windows.Forms.Label lblFooterInfo;
         private System.Windows.Forms.Label lblClock;
         private System.Windows.Forms.Timer timerClock;
+        private System.Windows.Forms.Label lblFluentBitStatus;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -71,6 +72,7 @@ namespace SIEM_Agent.UI
             this.lblFooterInfo = new System.Windows.Forms.Label();
             this.lblClock = new System.Windows.Forms.Label();
             this.timerClock = new System.Windows.Forms.Timer(this.components);
+            this.lblFluentBitStatus = new System.Windows.Forms.Label();
 
             // MainForm
             this.BackColor = System.Drawing.Color.FromArgb(18, 18, 18);
@@ -128,6 +130,13 @@ namespace SIEM_Agent.UI
             this.lblClock.Width = 120;
             this.footerPanel.Controls.Add(this.lblFooterInfo);
             this.footerPanel.Controls.Add(this.lblClock);
+            this.lblFluentBitStatus = new System.Windows.Forms.Label();
+            this.lblFluentBitStatus.AutoSize = true;
+            this.lblFluentBitStatus.ForeColor = System.Drawing.Color.LightGreen;
+            this.lblFluentBitStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFluentBitStatus.Text = "Fluent Bit: Đang kiểm tra...";
+            this.lblFluentBitStatus.Location = new System.Drawing.Point(300, 5);
+            this.footerPanel.Controls.Add(this.lblFluentBitStatus);
             // Timer cho clock
             this.timerClock.Interval = 1000;
             this.timerClock.Tick += (s, e) => { this.lblClock.Text = DateTime.Now.ToString("HH:mm:ss"); };

@@ -32,10 +32,9 @@ namespace SIEM_Agent.Core
                 {
                     FileName = fluentBitExe,
                     Arguments = $"-c \"{configPath}\"",
-                    UseShellExecute = true,
-                    Verb = "runas",
+                    UseShellExecute = false, // Để ẩn cửa sổ
                     CreateNoWindow = true,
-                    // WindowStyle = ProcessWindowStyle.Hidden
+                    WindowStyle = ProcessWindowStyle.Hidden
                 };
                 _fluentBitProcess = Process.Start(startInfo);
                 if (_fluentBitProcess == null)
@@ -67,10 +66,9 @@ namespace SIEM_Agent.Core
                 {
                     FileName = fluentBitExe,
                     Arguments = $"-c \"{configPath}\"",
-                    UseShellExecute = true,
-                    Verb = "runas",
+                    UseShellExecute = false, // Để ẩn cửa sổ
                     CreateNoWindow = true,
-                    // WindowStyle = ProcessWindowStyle.Hidden
+                    WindowStyle = ProcessWindowStyle.Hidden
                 };
                 _fluentBitProcess = Process.Start(startInfo);
                 if (_fluentBitProcess == null)
