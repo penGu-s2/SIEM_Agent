@@ -105,3 +105,17 @@ F:\Code\SIEM_Agent\obj\Debug\net8.0-windows\SIEM_Agent.UI.Forms.Controls.LogsCon
 F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\FluentBit\fluent-bit.dll.pdb
 F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\FluentBit\luajit.pdb
 F:\Code\SIEM_Agent\obj\Debug\net8.0-windows\SIEM_Agent.sourcelink.json
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.xml
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.xml
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.xml
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\UI\Forms\WebForm\web\dashboard.css
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\UI\Forms\WebForm\web\dashboard.html
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\UI\Forms\WebForm\web\dashboard.js
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\UI\Forms\WebForm\web\parser.js
+F:\Code\SIEM_Agent\bin\Debug\net8.0-windows\UI\Forms\WebForm\web\logs.js

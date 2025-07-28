@@ -25,12 +25,6 @@
     <Compile Update="UI\Forms\Controls\HttpOutputControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UI\Forms\Controls\InvestigationControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UI\Forms\Controls\LicensingControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="UI\Forms\Controls\LogsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -43,13 +37,13 @@
     <Compile Update="UI\Forms\Controls\ParserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UI\Forms\Controls\ReportsControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="UI\Forms\Controls\UsersControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UI\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\WebViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

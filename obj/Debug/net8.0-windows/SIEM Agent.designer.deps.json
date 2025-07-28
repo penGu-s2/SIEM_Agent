@@ -85,6 +85,25 @@
         }
       },
       "Microsoft.NETCore.Platforms/3.1.9": {},
+      "Microsoft.Web.WebView2/1.0.3415-prerelease": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.3415.0"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.3415.0"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.3415.0"
+          }
+        }
+      },
       "Microsoft.Win32.SystemEvents/4.7.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.9"
@@ -393,6 +412,13 @@
       "sha512": "sha512-e+/BrhryHoMojWlbcPJAFcShpk3JYvsMfrmoM26dnvHARWR6vtmGbfHppZcANVqf7DUBDIRxlZXcWg7v/9e1TQ==",
       "path": "microsoft.netcore.platforms/3.1.9",
       "hashPath": "microsoft.netcore.platforms.3.1.9.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.3415-prerelease": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7CGb9Y+KGdrJEKhrkU9g+Cz4WjG8wIeWx8eWbKqLgHZEUMayNfyxvILmE05gXhBnG/nz+i1cVLeGfrmIPNMjXQ==",
+      "path": "microsoft.web.webview2/1.0.3415-prerelease",
+      "hashPath": "microsoft.web.webview2.1.0.3415-prerelease.nupkg.sha512"
     },
     "Microsoft.Win32.SystemEvents/4.7.0": {
       "type": "package",

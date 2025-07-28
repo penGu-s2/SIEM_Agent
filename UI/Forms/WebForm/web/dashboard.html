@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Collector</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-root">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../icons/logo_siem.jpg" alt="Logo" class="sidebar-logo">
+                <span class="sidebar-title">SIEM Agent</span>
+            </div>
+            <nav class="sidebar-menu">
+                <a class="sidebar-item active" data-tab="dashboard" href="#">Dashboard</a>
+                <a class="sidebar-item" data-tab="config" href="#">Config</a>
+                <a class="sidebar-item" data-tab="logs" href="#">Logs</a>
+                <a class="sidebar-item" data-tab="parser" href="#">Parser</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section id="tab-dashboard" class="tab-section">
+                <!-- Nội dung Dashboard (Log Sources) -->
+                <header class="main-header">
+                    <h1>Log Sources</h1>
+                </header>
+                <div class="toolbar">
+                    <button id="btnAdd">Add</button>
+                    <button id="btnEdit">Edit</button>
+                    <button id="btnDelete">Delete</button>
+                    <button id="btnShowEvents">Show Events</button>
+                    <button id="btnEnableLog">Bật ghi log</button>
+                    <button id="btnDisableLog">Tắt ghi log</button>
+                    <input id="searchInput" type="text" placeholder="Log Source Name">
+                </div>
+                <section class="collector-table-section">
+                    <table class="collector-table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="selectAllCheckbox"></th>
+                                <th>Name</th>
+                                <th>Log Source Type</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="collector-table-body">
+                            <!-- Dữ liệu collector sẽ được render động ở đây -->
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+            <section id="tab-config" class="tab-section" style="display:none">
+                <header class="main-header"><h1>Config</h1></header>
+                <div id="config-content">(Chức năng cấu hình sẽ bổ sung ở bước sau)</div>
+            </section>
+            <section id="tab-logs" class="tab-section" style="display:none">
+                <header class="main-header"><h1>Logs</h1></header>
+                <div class="logs-toolbar">
+                    <select id="cmbLogType" class="log-type-select">
+                        <option value="winlog">Windows Event Log</option>
+                        <option value="syslog">Syslog</option>
+                        <option value="win_stat">Windows Statistics</option>
+                    </select>
+                    <input type="datetime-local" id="dtpStart" class="datetime-picker">
+                    <input type="datetime-local" id="dtpEnd" class="datetime-picker">
+                    <button id="btnLoadLogs" class="logs-toolbar button">Load Logs</button>
+                    <button id="btnRefreshLogs" class="logs-toolbar button">Làm mới</button>
+                    <button id="btnClearLogs" class="logs-toolbar button">Xóa log</button>
+                    <button id="btnToggleCollect" class="logs-toolbar button">Dừng lấy log</button>
+                    <button id="btnStartFluentBitConsole" class="logs-toolbar button">Khởi động FB (CMD)</button>
+                    <button id="btnStartFluentBitOutput" class="logs-toolbar button">Khởi động FB (Output)</button>
+                    <button id="btnCheckFluentBitStatus" class="logs-toolbar button">Kiểm tra trạng thái</button>
+                    <button id="btnDebugLogFile" class="logs-toolbar button">Debug Log File</button>
+                </div>
+                <div class="logs-table-container">
+                    <table id="logsTable" class="logs-table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Thời gian</th>
+                                <th>Nguồn</th>
+                                <th>Cấp độ</th>
+                                <th>Sự kiện</th>
+                                <th>Mô tả</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logsTableBody">
+                            <!-- Dữ liệu log sẽ được render động ở đây -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="tab-parser" class="tab-section" style="display:none">
+                <header class="main-header"><h1>Parser</h1></header>
+                <div id="parser-content">(Chức năng parser sẽ bổ sung ở bước sau)</div>
+            </section>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+    <script src="parser.js"></script>
+    <script src="logs.js"></script>
+</body>
+</html> 

@@ -9,12 +9,14 @@ using Guna.UI2.WinForms;
 using SIEM_Agent.UI.Forms.Properties;
 using System.IO;
 using SIEM_Agent.Core;
+using Microsoft.Web.WebView2.WinForms;
 
 namespace SIEM_Agent.UI
 {
     public partial class MainForm : Form
     {
         private readonly LogManagementService _logManagementService;
+        private WebView2 webView2;
 
         public MainForm()
         {
@@ -34,6 +36,11 @@ namespace SIEM_Agent.UI
         private void ConfigureControls()
         {
             InitializeSidebar();
+            // Khởi tạo WebView2 và thêm vào mainContentPanel nhưng ẩn mặc định
+            webView2 = new WebView2();
+            webView2.Dock = DockStyle.Fill;
+            webView2.Visible = false;
+            mainContentPanel.Controls.Add(webView2);
         }
 
         private void InitializeSidebar()
@@ -91,6 +98,8 @@ namespace SIEM_Agent.UI
             btnExit.Click += (s, e) => {
                 CloseAllConnectionsAndExit();
             };
+            // Thêm sự kiện click cho nút Dashboard để thử hiển thị WebView2
+            btnDashboard.DoubleClick += (s, e) => ShowWebView2Demo();
         }
 
         protected override void OnActivated(EventArgs e)
@@ -159,6 +168,12 @@ namespace SIEM_Agent.UI
             {
                 return false;
             }
+        }
+
+        private void ShowWebView2Demo()
+        {
+            var webForm = new WebViewForm();
+            webForm.Show();
         }
     }
 }

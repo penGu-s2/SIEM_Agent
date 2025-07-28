@@ -55,6 +55,10 @@
               "target": "Package",
               "version": "[2.0.4.7, )"
             },
+            "Microsoft.Web.WebView2": {
+              "target": "Package",
+              "version": "[1.0.3415-prerelease, )"
+            },
             "ScottPlot.WinForms": {
               "target": "Package",
               "version": "[5.0.55, )"

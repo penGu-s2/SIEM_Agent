@@ -68,9 +68,9 @@ namespace SIEM_Agent
                 var logRepository = new LogRepository("logs");
                 var logManagementService = new LogManagementService(logRepository);
 
-                // Chạy form chính
-                var mainForm = new MainForm(logManagementService);
-                Application.Run(mainForm);
+                // Chạy WebViewForm thay vì MainForm
+                var webViewForm = new WebViewForm(logManagementService);
+                Application.Run(webViewForm);
             }
             catch (Exception ex)
             {
