@@ -9,6 +9,8 @@
     <AssemblyName>SIEM Agent</AssemblyName>
     <RootNamespace>SIEM_Agent</RootNamespace>
     <Product>SIEM Agent</Product>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,7 +21,7 @@
 
   <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3415-prerelease" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
     <PackageReference Include="ScottPlot.WinForms" Version="5.0.55" />
     <PackageReference Include="System.Data.Odbc" Version="10.0.0-preview.5.25277.114" />
     <PackageReference Include="System.Windows.Forms.DataVisualization" Version="1.0.0-prerelease.20110.1" />
@@ -66,6 +68,15 @@
     <None Update="parsers.conf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Form1.cs" />
+    <Compile Remove="Form1.Designer.cs" />
+    <Compile Remove="UI\Forms\MainForm.cs" />
+    <Compile Remove="UI\Forms\MainForm.Designer.cs" />
+    <None Remove="Form1.resx" />
+    <None Remove="UI\Forms\MainForm.resx" />
   </ItemGroup>
 
 </Project>

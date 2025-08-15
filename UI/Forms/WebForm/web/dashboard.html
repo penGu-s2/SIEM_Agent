@@ -15,9 +15,9 @@
             </div>
             <nav class="sidebar-menu">
                 <a class="sidebar-item active" data-tab="dashboard" href="#">Dashboard</a>
-                <a class="sidebar-item" data-tab="config" href="#">Config</a>
                 <a class="sidebar-item" data-tab="logs" href="#">Logs</a>
                 <a class="sidebar-item" data-tab="parser" href="#">Parser</a>
+                <a class="sidebar-item" data-tab="config" href="#">Config</a>
             </nav>
         </aside>
         <main class="main-content">
@@ -37,7 +37,7 @@
                 </div>
                 <section class="collector-table-section">
                     <table class="collector-table">
-                        <thead>
+                                                                         <thead>
                             <tr>
                                 <th><input type="checkbox" id="selectAllCheckbox"></th>
                                 <th>Name</th>
@@ -51,10 +51,6 @@
                         </tbody>
                     </table>
                 </section>
-            </section>
-            <section id="tab-config" class="tab-section" style="display:none">
-                <header class="main-header"><h1>Config</h1></header>
-                <div id="config-content">(Chức năng cấu hình sẽ bổ sung ở bước sau)</div>
             </section>
             <section id="tab-logs" class="tab-section" style="display:none">
                 <header class="main-header"><h1>Logs</h1></header>
@@ -97,10 +93,86 @@
                 <header class="main-header"><h1>Parser</h1></header>
                 <div id="parser-content">(Chức năng parser sẽ bổ sung ở bước sau)</div>
             </section>
+            <section id="tab-config" class="tab-section" style="display:none">
+                <header class="main-header"><h1>Config</h1></header>
+                <div id="config-content">(Chức năng config sẽ bổ sung ở bước sau)</div>
+            </section>
         </main>
     </div>
-    <script src="dashboard.js"></script>
-    <script src="parser.js"></script>
-    <script src="logs.js"></script>
+
+    <!-- Tab Navigation JavaScript -->
+    <script>
+        // Tab navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabItems = document.querySelectorAll('.sidebar-item');
+            const tabSections = document.querySelectorAll('.tab-section');
+            
+            function showTab(tabName) {
+                // Hide all tab sections
+                tabSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Remove active class from all tab items
+                tabItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Show selected tab section
+                const selectedSection = document.getElementById(`tab-${tabName}`);
+                if (selectedSection) {
+                    selectedSection.style.display = 'block';
+                }
+                
+                // Add active class to selected tab item
+                const selectedTab = document.querySelector(`[data-tab="${tabName}"]`);
+                if (selectedTab) {
+                    selectedTab.classList.add('active');
+                }
+                
+                // Initialize specific tab functionality
+                switch(tabName) {
+                    case 'logs':
+                        if (typeof window.initLogsTab === 'function') {
+                            window.initLogsTab();
+                        }
+                        break;
+                    case 'parser':
+                        if (typeof window.parserManager !== 'undefined' && window.parserManager) {
+                            window.parserManager.loadParsers();
+                        }
+                        break;
+                    case 'config':
+                        if (typeof window.initConfigTab === 'function') {
+                            window.initConfigTab();
+                        }
+                        break;
+                }
+            }
+            
+            // Add click event listeners to tab items
+            tabItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tabName = this.getAttribute('data-tab');
+                    showTab(tabName);
+                });
+            });
+            
+            // Show dashboard tab by default
+            showTab('dashboard');
+        });
+    </script>
+
+    <!-- Load JavaScript theo thứ tự đúng -->
+    <script src="js/constants.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/collector-actions.js"></script>
+    <script src="js/parsers.js"></script>
+    <script src="js/logs.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/test-integration.js"></script>
 </body>
 </html> 

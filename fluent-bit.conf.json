@@ -1,6 +1,0 @@
-{
-  "winlog": {
-    "Tag": "win_stat",
-    "Interval_Sec": "5"
-  }
-}

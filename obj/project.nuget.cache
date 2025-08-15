@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "H9XF/Z9oaUE=",
+  "dgSpecHash": "c8ZH7Imy+uo=",
   "success": true,
   "projectFilePath": "F:\\Code\\SIEM_Agent\\SIEM_Agent.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\7.3.0.3\\harfbuzzsharp.nativeassets.macos.7.3.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\7.3.0.3\\harfbuzzsharp.nativeassets.win32.7.3.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.9\\microsoft.netcore.platforms.3.1.9.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.web.webview2\\1.0.3415-prerelease\\microsoft.web.webview2.1.0.3415-prerelease.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.web.webview2\\1.0.2592.51\\microsoft.web.webview2.1.0.2592.51.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\opentk\\3.1.0\\opentk.3.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\opentk.glcontrol\\3.1.0\\opentk.glcontrol.3.1.0.nupkg.sha512",

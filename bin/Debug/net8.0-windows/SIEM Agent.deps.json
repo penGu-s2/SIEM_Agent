@@ -9,14 +9,11 @@
       "SIEM Agent/1.0.0": {
         "dependencies": {
           "Guna.UI2.WinForms": "2.0.4.7",
-          "Microsoft.Web.WebView2": "1.0.3415-prerelease",
+          "Microsoft.Web.WebView2": "1.0.2592.51",
           "ScottPlot.WinForms": "5.0.55",
           "System.Data.Odbc": "10.0.0-preview.5.25277.114",
           "System.Windows.Forms.DataVisualization": "1.0.0-prerelease.20110.1",
-          "WinForms.DataVisualization": "1.10.0",
-          "Microsoft.Web.WebView2.Core": "1.0.3415.0",
-          "Microsoft.Web.WebView2.WinForms": "1.0.3415.0",
-          "Microsoft.Web.WebView2.Wpf": "1.0.3415.0"
+          "WinForms.DataVisualization": "1.10.0"
         },
         "runtime": {
           "SIEM Agent.dll": {}
@@ -101,22 +98,36 @@
         }
       },
       "Microsoft.NETCore.Platforms/3.1.9": {},
-      "Microsoft.Web.WebView2/1.0.3415-prerelease": {
+      "Microsoft.Web.WebView2/1.0.2592.51": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.2592.51",
+            "fileVersion": "1.0.2592.51"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.2592.51",
+            "fileVersion": "1.0.2592.51"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.2592.51",
+            "fileVersion": "1.0.2592.51"
+          }
+        },
         "runtimeTargets": {
           "runtimes/win-arm64/native/WebView2Loader.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "1.0.3415.0"
+            "fileVersion": "1.0.2592.51"
           },
           "runtimes/win-x64/native/WebView2Loader.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "1.0.3415.0"
+            "fileVersion": "1.0.2592.51"
           },
           "runtimes/win-x86/native/WebView2Loader.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "1.0.3415.0"
+            "fileVersion": "1.0.2592.51"
           }
         }
       },
@@ -342,30 +353,6 @@
             "fileVersion": "1.10.0.0"
           }
         }
-      },
-      "Microsoft.Web.WebView2.Core/1.0.3415.0": {
-        "runtime": {
-          "Microsoft.Web.WebView2.Core.dll": {
-            "assemblyVersion": "1.0.3415.0",
-            "fileVersion": "1.0.3415.0"
-          }
-        }
-      },
-      "Microsoft.Web.WebView2.WinForms/1.0.3415.0": {
-        "runtime": {
-          "Microsoft.Web.WebView2.WinForms.dll": {
-            "assemblyVersion": "1.0.3415.0",
-            "fileVersion": "1.0.3415.0"
-          }
-        }
-      },
-      "Microsoft.Web.WebView2.Wpf/1.0.3415.0": {
-        "runtime": {
-          "Microsoft.Web.WebView2.Wpf.dll": {
-            "assemblyVersion": "1.0.3415.0",
-            "fileVersion": "1.0.3415.0"
-          }
-        }
       }
     }
   },
@@ -417,12 +404,12 @@
       "path": "microsoft.netcore.platforms/3.1.9",
       "hashPath": "microsoft.netcore.platforms.3.1.9.nupkg.sha512"
     },
-    "Microsoft.Web.WebView2/1.0.3415-prerelease": {
+    "Microsoft.Web.WebView2/1.0.2592.51": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7CGb9Y+KGdrJEKhrkU9g+Cz4WjG8wIeWx8eWbKqLgHZEUMayNfyxvILmE05gXhBnG/nz+i1cVLeGfrmIPNMjXQ==",
-      "path": "microsoft.web.webview2/1.0.3415-prerelease",
-      "hashPath": "microsoft.web.webview2.1.0.3415-prerelease.nupkg.sha512"
+      "sha512": "sha512-AC9aWCthS2JvddYA1jl4dFpLBW3GsLRInhp5dkcBzaFXsRehfoUN9olIUsrH41eNaNYd7z9NRvmy81aUA5aD1g==",
+      "path": "microsoft.web.webview2/1.0.2592.51",
+      "hashPath": "microsoft.web.webview2.1.0.2592.51.nupkg.sha512"
     },
     "Microsoft.Win32.SystemEvents/4.7.0": {
       "type": "package",
@@ -549,21 +536,6 @@
       "sha512": "sha512-QKFQUf6xnsseiRsWfIeKvbWRJWvOKOvkoec/pWxEjwYrr4Vix4xmAWmvTpJGxoeWRXOzV7Pprm5SCFqzXzBA4g==",
       "path": "winforms.datavisualization/1.10.0",
       "hashPath": "winforms.datavisualization.1.10.0.nupkg.sha512"
-    },
-    "Microsoft.Web.WebView2.Core/1.0.3415.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Web.WebView2.WinForms/1.0.3415.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Web.WebView2.Wpf/1.0.3415.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

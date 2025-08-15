@@ -17,6 +17,7 @@ namespace SIEM_Agent
         {
             try
             {
+                Console.WriteLine("🚀 Program.Main bắt đầu");
                 Application.SetHighDpiMode(HighDpiMode.SystemAware);
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
@@ -39,7 +40,9 @@ namespace SIEM_Agent
                 var config = JsonSerializer.Deserialize<dynamic>(configJson);
 
                 // Luôn khởi động Fluent Bit khi chạy app
+                Console.WriteLine("🔄 Bắt đầu khởi động Fluent Bit");
                 FluentBitHelper.RestartFluentBitWithNotify();
+                Console.WriteLine("✅ Fluent Bit đã được khởi động");
 
                 if (config is System.Text.Json.JsonElement rootElem &&
                     rootElem.TryGetProperty("config_sync", out var syncCfg) &&
@@ -65,11 +68,19 @@ namespace SIEM_Agent
                 }
 
                 // Khởi tạo repository và service
+                Console.WriteLine("🔄 Bắt đầu khởi tạo repository và service");
                 var logRepository = new LogRepository("logs");
                 var logManagementService = new LogManagementService(logRepository);
+                Console.WriteLine("✅ Repository và service đã được khởi tạo");
 
                 // Chạy WebViewForm thay vì MainForm
+                Console.WriteLine("🚀 Bắt đầu tạo WebViewForm");
                 var webViewForm = new WebViewForm(logManagementService);
+                Console.WriteLine("✅ WebViewForm đã được tạo, bắt đầu chạy");
+                Console.WriteLine("📁 WebViewForm sẽ load dashboard.html từ: UI/Forms/WebForm/web/dashboard.html");
+                Console.WriteLine("📁 Dashboard sẽ gửi message 'get_collectors' để đọc fluent-bit.conf");
+                Console.WriteLine("📁 fluent-bit.conf sẽ được parse để tìm [INPUT] sections");
+                Console.WriteLine("📁 Dữ liệu collectors sẽ được gửi đến JavaScript qua updateCollectorsFromCSharp()");
                 Application.Run(webViewForm);
             }
             catch (Exception ex)

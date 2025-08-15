@@ -47,7 +47,7 @@ namespace SIEM_Agent.Core.Services
             return _currentConfig;
         }
 
-        private async Task SyncConfigAsync()
+        public async Task SyncConfigAsync()
         {
             try
             {
